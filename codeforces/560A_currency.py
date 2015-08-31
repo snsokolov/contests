@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 560A_currency.py - Codeforces.com 560A Currency program by Sergey 2015
+# 560A_currency.py - Codeforces.com/problemset/problem/560/A Currency program by Sergey 2015
 
 # Standard modules
 import unittest

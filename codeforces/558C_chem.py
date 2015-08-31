@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 558C_chem.py - Codeforces.com 558C Chem quiz by Sergey 2015
+# 558C_chem.py - Codeforces.com/problemset/problem/558/C Chem quiz by Sergey 2015
 
 # Standard modules
 import unittest

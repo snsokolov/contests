@@ -1,4 +1,4 @@
-// 567D_ships.cc - Codeforces.com 567D Ships program by Sergey 2015
+// 567D_ships.cc - Codeforces.com/problemset/problem/567/D Ships program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

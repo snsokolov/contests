@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 569B_inv.py - Codeforces.com 569B Inv program by Sergey 2015
+# 569B_inv.py - Codeforces.com/problemset/problem/569/B Inv program by Sergey 2015
 
 import unittest
 import sys

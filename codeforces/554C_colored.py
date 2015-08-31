@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 554C_colored.py - Codeforces.com 554C Colored quiz by Sergey 2015
+# 554C_colored.py - Codeforces.com/problemset/problem/554/C Colored quiz by Sergey 2015
 
 # Standard modules
 import unittest

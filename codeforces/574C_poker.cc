@@ -1,4 +1,4 @@
-// 574C_poker.cc - Codeforces.com 574C Poker program by Sergey 2015
+// 574C_poker.cc - Codeforces.com/problemset/problem/574/C Poker program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

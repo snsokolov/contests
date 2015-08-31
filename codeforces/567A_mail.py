@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 567A_mail.py - Codeforces.com 567A Mail program by Sergey 2015
+# 567A_mail.py - Codeforces.com/problemset/problem/567/A Mail program by Sergey 2015
 
 import unittest
 import sys

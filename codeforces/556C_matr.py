@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 556C_matr.py - Codeforces.com 556C Matr quiz by Sergey 2015
+# 556C_matr.py - Codeforces.com/problemset/problem/556/C Matr quiz by Sergey 2015
 
 # Standard modules
 import unittest

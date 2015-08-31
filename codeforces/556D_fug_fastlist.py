@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 556D_fug.py - Codeforces.com 556D Fug quiz by Sergey 2015
+# 556D_fug.py - Codeforces.com/problemset/problem/556/D Fug quiz by Sergey 2015
 
 # Standard modules
 import unittest

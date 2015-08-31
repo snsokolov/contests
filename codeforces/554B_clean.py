@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 554B_clean.py - Codeforces.com 554B Clean quiz by Sergey 2015
+# 554B_clean.py - Codeforces.com/problemset/problem/554/B Clean quiz by Sergey 2015
 
 # Standard modules
 import unittest

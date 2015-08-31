@@ -1,4 +1,4 @@
-// 572B_book.cc - Codeforces.com 572B Book program by Sergey 2015
+// 572B_book.cc - Codeforces.com/problemset/problem/572/B Book program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

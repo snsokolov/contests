@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# paper.py - Codeforces.com 527A Paper quiz by Sergey 2015
+# paper.py - Codeforces.com/problemset/problem/527/A Paper quiz by Sergey 2015
 
 # Standard modules
 import unittest

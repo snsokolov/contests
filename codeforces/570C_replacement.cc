@@ -1,4 +1,4 @@
-// 570C_replacement.cc - Codeforces.com 570C Replacement program by Sergey 2015
+// 570C_replacement.cc - Codeforces.com/problemset/problem/570/C Replacement program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

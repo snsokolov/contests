@@ -1,4 +1,4 @@
-// 572D_min.cc - Codeforces.com 572D Min program by Sergey 2015
+// 572D_min.cc - Codeforces.com/problemset/problem/572/D Min program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

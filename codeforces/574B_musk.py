@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 574B_musk.py - Codeforces.com 574B Musk program by Sergey 2015
+# 574B_musk.py - Codeforces.com/problemset/problem/574/B Musk program by Sergey 2015
 
 import unittest
 import sys

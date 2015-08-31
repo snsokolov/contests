@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 560B_art.py - Codeforces.com 560B Art program by Sergey 2015
+# 560B_art.py - Codeforces.com/problemset/problem/560/B Art program by Sergey 2015
 
 # Standard modules
 import unittest

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 557B_tea.py - Codeforces.com 557B Tea quiz by Sergey 2015
+# 557B_tea.py - Codeforces.com/problemset/problem/557/B Tea quiz by Sergey 2015
 
 # Standard modules
 import unittest

@@ -1,4 +1,4 @@
-// 558D_way.cc - Codeforces.com 558D Way quiz by Sergey 2015
+// 558D_way.cc - Codeforces.com/problemset/problem/558/D Way quiz by Sergey 2015
 
 // Standard modules
 #include <bits/stdc++.h>

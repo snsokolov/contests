@@ -1,4 +1,4 @@
-// 566F_clique.cc - Codeforces.com 566F Clique program by Sergey 2015
+// 566F_clique.cc - Codeforces.com/problemset/problem/566/F Clique program by Sergey 2015
 
 // All standard modules
 #include <bits/stdc++.h>

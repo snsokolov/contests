@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 560C_hexagon.py - Codeforces.com 560C Hexagon program by Sergey 2015
+# 560C_hexagon.py - Codeforces.com/problemset/problem/560/C Hexagon program by Sergey 2015
 
 # Standard modules
 import unittest

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 560D_strings.py - Codeforces.com 560D Strings program by Sergey 2015
+# 560D_strings.py - Codeforces.com/problemset/problem/560/D Strings program by Sergey 2015
 
 # Standard modules
 import unittest

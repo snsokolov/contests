@@ -1,4 +1,4 @@
-// 567B_lib.cc - Codeforces.com 567B Lib program by Sergey 2015
+// 567B_lib.cc - Codeforces.com/problemset/problem/567/B Lib program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

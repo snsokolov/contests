@@ -1,4 +1,4 @@
-// 558A_apple.cc - Codeforces.com 558A Apple quiz by Sergey 2015
+// 558A_apple.cc - Codeforces.com/problemset/problem/558/A Apple quiz by Sergey 2015
 
 // Standard modules
 #include <bits/stdc++.h>

@@ -1,4 +1,4 @@
-// 569A_music.cc - Codeforces.com 569A Music program by Sergey 2015
+// 569A_music.cc - Codeforces.com/problemset/problem/569/A Music program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

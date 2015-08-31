@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 557A_diploma.py - Codeforces.com 557A Diploma quiz by Sergey 2015
+# 557A_diploma.py - Codeforces.com/problemset/problem/557/A Diploma quiz by Sergey 2015
 
 # Standard modules
 import unittest

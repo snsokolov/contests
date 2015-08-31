@@ -1,4 +1,4 @@
-// 574D_blocks.cc - Codeforces.com 574D Blocks program by Sergey 2015
+// 574D_blocks.cc - Codeforces.com/problemset/problem/574/D Blocks program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

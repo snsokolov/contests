@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 560E_chess.py - Codeforces.com 560E Chess program by Sergey 2015
+# 560E_chess.py - Codeforces.com/problemset/problem/560/E Chess program by Sergey 2015
 
 # Standard modules
 import unittest

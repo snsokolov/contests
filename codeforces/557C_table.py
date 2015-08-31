@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 557C_table.py - Codeforces.com 557C Table quiz by Sergey 2015
+# 557C_table.py - Codeforces.com/problemset/problem/557/C Table quiz by Sergey 2015
 
 # Standard modules
 import unittest

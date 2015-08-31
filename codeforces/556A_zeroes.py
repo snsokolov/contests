@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 556A_zeroes.py - Codeforces.com 556A Zeroes quiz by Sergey 2015
+# 556A_zeroes.py - Codeforces.com/problemset/problem/556/A Zeroes quiz by Sergey 2015
 
 # Standard modules
 import unittest

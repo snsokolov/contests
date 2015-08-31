@@ -1,4 +1,4 @@
-// 569C_primes.cc - Codeforces.com 569C Primes program by Sergey 2015
+// 569C_primes.cc - Codeforces.com/problemset/problem/569/C Primes program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 556B_fake.py - Codeforces.com 556B Fake quiz by Sergey 2015
+# 556B_fake.py - Codeforces.com/problemset/problem/556/B Fake quiz by Sergey 2015
 
 # Standard modules
 import unittest

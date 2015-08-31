@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 572A_arrays.py - Codeforces.com 572A Arrays program by Sergey 2015
+# 572A_arrays.py - Codeforces.com/problemset/problem/572/A Arrays program by Sergey 2015
 
 import unittest
 import sys

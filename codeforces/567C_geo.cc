@@ -1,4 +1,4 @@
-// 567C_geo.cc - Codeforces.com 567C Geo program by Sergey 2015
+// 567C_geo.cc - Codeforces.com/problemset/problem/567/C Geo program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

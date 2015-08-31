@@ -1,4 +1,4 @@
-// 570A_elections.cc - Codeforces.com 570A Elections program by Sergey 2015
+// 570A_elections.cc - Codeforces.com/problemset/problem/570/A Elections program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

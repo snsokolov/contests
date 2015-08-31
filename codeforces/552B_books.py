@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# books.py - Codeforces.com 552B Books quiz by Sergey 2015
+# books.py - Codeforces.com/problemset/problem/552/B Books quiz by Sergey 2015
 #
 # Copyright (C) 2015 Sergey
 

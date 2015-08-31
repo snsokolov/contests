@@ -1,4 +1,4 @@
-// 558C_chem.cc - Codeforces.com 558C Chem quiz by Sergey 2015
+// 558C_chem.cc - Codeforces.com/problemset/problem/558/C Chem quiz by Sergey 2015
 
 // Standard modules
 #include <bits/stdc++.h>

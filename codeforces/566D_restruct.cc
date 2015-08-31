@@ -1,4 +1,4 @@
-// 566D_restruct.cc - Codeforces.com 566D Restruct program by Sergey 2015
+// 566D_restruct.cc - Codeforces.com/problemset/problem/566/D Restruct program by Sergey 2015
 
 // All standard modules
 #include <bits/stdc++.h>

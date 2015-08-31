@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# table.py - Codeforces.com 552A Table quiz by Sergey 2015
+# table.py - Codeforces.com/problemset/problem/552/A Table quiz by Sergey 2015
 
 # Standard modules
 import unittest

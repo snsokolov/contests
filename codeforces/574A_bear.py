@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 574A_bear.py - Codeforces.com 574A Bear program by Sergey 2015
+# 574A_bear.py - Codeforces.com/problemset/problem/574/A Bear program by Sergey 2015
 
 import unittest
 import sys

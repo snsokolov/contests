@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# scales.py - Codeforces.com 552C quiz by Sergey 2015
+# scales.py - Codeforces.com/problemset/problem/552/C quiz by Sergey 2015
 
 # Standard modules
 import unittest

@@ -1,4 +1,4 @@
-// 572C_sticks.cc - Codeforces.com 572C Sticks program by Sergey 2015
+// 572C_sticks.cc - Codeforces.com/problemset/problem/572/C Sticks program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# 554A_photo.py - Codeforces.com 554A Photo quiz by Sergey 2015
+# 554A_photo.py - Codeforces.com/problemset/problem/554/A Photo quiz by Sergey 2015
 
 # Standard modules
 import unittest

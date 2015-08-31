@@ -1,4 +1,4 @@
-// 570B_game.cc - Codeforces.com 570B Game program by Sergey 2015
+// 570B_game.cc - Codeforces.com/problemset/problem/570/B Game program by Sergey 2015
 
 #include <bits/stdc++.h>
 using namespace std;
