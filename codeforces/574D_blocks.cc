@@ -3,42 +3,38 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-///////////////////////////////////////////////////////////////////////////////
-// Unit tests base Class
-///////////////////////////////////////////////////////////////////////////////
-
-
-class Unittest { public:
+// Cppunit - C++ Unit testing TDD framework (github.com/cppunit/cppunit)
+class Cppunit { public:
     #define CHECK(a,b)  check<long long>(a, b, #a, #b, __FILE__, __LINE__, __FUNCTION__);
-    #define CHECKT(a)   check<int>(a, 1, #a, "true", __FILE__, __LINE__, __FUNCTION__);
+    #define CHECKT(a)   check<bool>(a, true, #a, "true", __FILE__, __LINE__, __FUNCTION__);
     #define CHECKS(a,b) check<cs>(a, b, #a, #b, __FILE__, __LINE__, __FUNCTION__);
-    typedef const string& cs;
-    int checks, fails; ostringstream serr; istringstream *in;
-    Unittest() { checks = fails = 0;}
-    void test_cin(cs s){ in = new istringstream(s); cin.rdbuf(in->rdbuf()); }
+    typedef const std::string& cs;
+    int checks, fails; std::ostringstream serr; std::istringstream *in;
+    Cppunit() { checks = fails = 0;}
+    void test_cin(cs s){ in = new std::istringstream(s); std::cin.rdbuf(in->rdbuf()); }
     void fail_hdr(cs stra, cs strb, cs file, int line, cs func) {
-        serr << "==================================================" << endl;
-        serr << "FAIL: " << func << endl;
-        serr << "--------------------------------------------------" << endl;
-        serr << "File \"" << file << "\", line " << line << " in " << func << endl;
-        serr << "  Checking " << stra << " == " << strb << endl;
+        serr << "==================================================" << std::endl;
+        serr << "FAIL: " << func << std::endl;
+        serr << "--------------------------------------------------" << std::endl;
+        serr << "File \"" << file << "\", line " << line << " in " << func << std::endl;
+        serr << "  Checking " << stra << " == " << strb << std::endl;
     }
     template <typename T> void check(T a, T b, cs stra, cs strb, cs file, int line, cs func) {
-        checks++; if (a == b) { cout << "."; return; }
-        fails++; cout << "F"; fail_hdr(stra, strb, file, line, func);
-        serr << "  Error: \"" << a << "\" ! = \"" << b << "\"" << endl << endl;
+        checks++; if (a == b) { std::cout << "."; return; }
+        fails++; std::cout << "F"; fail_hdr(stra, strb, file, line, func);
+        serr << "  Error: \"" << a << "\" ! = \"" << b << "\"" << std::endl << std::endl;
     }
     virtual void single_test() {}
     virtual void test_list() { single_test(); }
     double dclock() { return double(clock()) / CLOCKS_PER_SEC; }
     status() {
-        cout << endl; if (fails) cout << serr.str();
-        cout << "--------------------------------------------------" << endl;
-        cout << "Ran " << checks << " checks in " << dclock() << "s" << endl << endl;
-        if (fails) cout << "FAILED (failures=" << fails << ")"; else cout << "OK" << endl;
+        std::cout << std::endl; if (fails) std::cout << serr.str();
+        std::cout << "--------------------------------------------------" << std::endl;
+        std::cout << "Ran " << checks << " checks in " << dclock() << "s" << std::endl << std::endl;
+        if (fails) std::cout << "FAILED (failures=" << fails << ")"; else std::cout << "OK" << std::endl;
         return fails > 0;
     }
-    run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
+    run() { std::streambuf* ocin = std::cin.rdbuf(); test_list(); std::cin.rdbuf(ocin); return status(); }
 };
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -67,9 +63,12 @@ class Blocks { public:
 
     string calculate(){
 
-        for(int i=0; i<n; i++) left.push_back(min(i == 0 ? 1 : left[i-1]+1, nums[i]));
-        for(int i=0; i<n; i++) right.push_back(min(i == 0 ? 1 : right[i-1]+1, nums[n-i-1]));
-        for(int i=0; i<n; i++) mmax = max(mmax, min(left[n-i-1], right[i]));
+        for(int i=0; i<n; i++) 
+            left.push_back(min(i == 0 ? 1 : left[i-1]+1, nums[i]));
+        for(int i=0; i<n; i++) 
+            right.push_back(min(i == 0 ? 1 : right[i-1]+1, nums[n-i-1]));
+        for(int i=0; i<n; i++) 
+            mmax = max(mmax, min(left[n-i-1], right[i]));
 
         // Converting result to string
         ostringstream resstr;
@@ -79,11 +78,11 @@ class Blocks { public:
 };
 
 ///////////////////////////////////////////////////////////////////////////////
-// Local Unit tests
+// Unit tests
 ///////////////////////////////////////////////////////////////////////////////
 
 
-class LocalUnittest: public Unittest {
+class MyCppunit: public Cppunit {
 
     Blocks* d;
 
@@ -136,20 +135,15 @@ class LocalUnittest: public Unittest {
     }
 };
 
-///////////////////////////////////////////////////////////////////////////////
-// Main Execution
-///////////////////////////////////////////////////////////////////////////////
-
 
 int main(int argc, char *argv[]) {
 
     // Faster cin and cout
     ios_base::sync_with_stdio(0);cin.tie(0);
 
-    if (argc > 1 && !strcmp(argv[1], "-ut")) {
-        LocalUnittest lut;
-        return lut.run();
-    }
+    if (argc > 1 && !strcmp(argv[1], "-ut"))
+        return (new MyCppunit)->run();
+
     cout << (new Blocks)->calculate() << endl;
     return 0;
 }
