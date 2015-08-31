@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 # books.py - Codeforces.com/problemset/problem/552/B Books quiz by Sergey 2015
-#
-# Copyright (C) 2015 Sergey
 
 # Standard modules
 import unittest
