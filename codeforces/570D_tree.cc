@@ -179,7 +179,7 @@ class Tree { public:
                 }
                 resstr << (res ? "Yes" : "No");
             }
-            resstr << endl;
+            resstr << "\n";
         }
 
         return resstr.str();
@@ -273,7 +273,7 @@ int main(int argc, char *argv[]) {
         LocalUnittest lut;
         return lut.run();
     }
-    cout << (new Tree)->calculate() << endl;
+    cout << (new Tree)->calculate();
     return 0;
 }
 

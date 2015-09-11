@@ -343,7 +343,7 @@ int main(int argc, char *argv[]) {
         LocalUnittest lut;
         return lut.run();
     }
-    cout << calculate() << endl;
+    cout << calculate();
     return 0;
 }
 
