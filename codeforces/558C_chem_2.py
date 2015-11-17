@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 558C_chem.py - Codeforces.com/problemset/problem/558/C Chem quiz by Sergey 2015
 
 # Standard modules

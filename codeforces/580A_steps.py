@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 580A_steps.py - Codeforces.com/problemset/problem/580/A by Sergey 2015
 
 import unittest

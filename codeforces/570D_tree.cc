@@ -31,14 +31,14 @@ class Unittest { public:
     virtual void single_test() {}
     virtual void test_list() { single_test(); }
     double dclock() { return double(clock()) / CLOCKS_PER_SEC; }
-    status() {
+    int status() {
         cout << endl; if (fails) cout << serr.str();
         cout << "--------------------------------------------------" << endl;
         cout << "Ran " << checks << " checks in " << dclock() << "s" << endl << endl;
         if (fails) cout << "FAILED (failures=" << fails << ")"; else cout << "OK" << endl;
         return fails > 0;
     }
-    run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
+    int run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
 };
 
 ///////////////////////////////////////////////////////////////////////////////

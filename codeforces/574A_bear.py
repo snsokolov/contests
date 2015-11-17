@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 574A_bear.py - Codeforces.com/problemset/problem/574/A Bear program by Sergey 2015
 
 import unittest

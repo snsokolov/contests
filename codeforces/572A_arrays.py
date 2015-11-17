@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 572A_arrays.py - Codeforces.com/problemset/problem/572/A Arrays program by Sergey 2015
 
 import unittest

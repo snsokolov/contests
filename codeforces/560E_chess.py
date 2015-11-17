@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 560E_chess.py - Codeforces.com/problemset/problem/560/E Chess program by Sergey 2015
 
 # Standard modules

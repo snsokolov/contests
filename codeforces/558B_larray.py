@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 558B_larray.py - Codeforces.com/problemset/problem/558/B Larray quiz by Sergey 2015
 
 # Standard modules

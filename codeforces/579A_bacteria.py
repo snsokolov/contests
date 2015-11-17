@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 579A_bacteria.py - Codeforces.com/problemset/problem/579/A by Sergey 2015
 
 import unittest

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 556C_matr.py - Codeforces.com/problemset/problem/556/C Matr quiz by Sergey 2015
 
 # Standard modules

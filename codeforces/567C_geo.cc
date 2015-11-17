@@ -15,12 +15,12 @@ class Unittest { public:
     typedef const string& cs;
     int checks, fails; ostringstream serr; istringstream *in;
     Unittest() { checks = fails = 0;}
-    run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
+    int run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
     virtual test_list() { single_test(); }
     virtual single_test() {}
     test_cin(cs s){ in = new istringstream(s); cin.rdbuf(in->rdbuf()); }
     template <typename T> check(T a, T b, cs stra, cs strb, cs file, int line, cs func) {
-        checks++; if (a == b) { cout << "."; return 0; } 
+        checks++; if (a == b) { cout << "."; return 0; }
         fails++; cout << "F"; hdr(stra, strb, file, line, func);
         serr << "  Error: \"" << a << "\" ! = \"" << b << "\"" << endl << endl;
     }
@@ -31,7 +31,7 @@ class Unittest { public:
         serr << "File \"" << file << "\", line " << line << " in " << func << endl;
         serr << "  Checking " << stra << " == " << strb << endl;
     }
-    status() {
+    int status() {
         cout << endl; if (fails) cout << serr.str();
         cout << "--------------------------------------------------" << endl;
         cout << "Ran " << checks << " checks in " << dclock() << "s" << endl << endl;
@@ -146,7 +146,7 @@ class LocalUnittest: public Unittest {
 
         int smax = nmax;
         ostringstream stest;
-        
+
         // Random inputs
         stest << nmax << " " << smax << endl;
         for(int i = 0; i < nmax; i++) stest << i << " " << i+1 << endl;
@@ -174,10 +174,6 @@ int main(int argc, char *argv[]) {
     // Faster cin and cout
     ios_base::sync_with_stdio(0);cin.tie(0);
 
-    if (argc > 1 && !strcmp(argv[1], "-ut")) {
-        LocalUnittest lut;
-        return lut.run();
-    }
     cout << (new Geo)->calculate() << endl;
     return 0;
 }

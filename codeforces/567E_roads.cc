@@ -31,14 +31,14 @@ class Unittest { public:
     virtual single_test() {}
     virtual test_list() { single_test(); }
     double dclock() { return double(clock()) / CLOCKS_PER_SEC; }
-    status() {
+    int status() {
         cout << endl; if (fails) cout << serr.str();
         cout << "--------------------------------------------------" << endl;
         cout << "Ran " << checks << " checks in " << dclock() << "s" << endl << endl;
         if (fails) cout << "FAILED (failures=" << fails << ")"; else cout << "OK" << endl;
         return fails > 0;
     }
-    run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
+    int run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
 };
 
 
@@ -57,7 +57,7 @@ class Modh { public:
         for(int i=0; i<NMOD; i++) val.push_back(x);
     }
     void operator += (const Modh &x) {
-         for(int i=0; i<NMOD; i++) { 
+         for(int i=0; i<NMOD; i++) {
             val[i] += x.val[i];
             if (val[i] >= MOD[i]) val[i] -= MOD[i];
         }
@@ -90,14 +90,14 @@ class Graph { public:
 
     init(ll n) { G.resize(n+1); }
 
-    add(ll a, ll b, ll w=0) { 
+    add(ll a, ll b, ll w=0) {
         G[a].push_back(make_pair(b, w));
         E.push_back(make_pair(a, G[a].size()-1));
     }
 
     ll min_dist(ll a, ll b){ return dijkstra(a)[b]; }
 
-    ll adj_dist(ll a, ll b) { 
+    ll adj_dist(ll a, ll b) {
         for(pll e: G[a]) if(e.first == b) return e.second;
         return INF;
     }
@@ -269,7 +269,7 @@ class LocalUnittest: public Unittest {
         for(int i = 0; i < m; i++) {
             int ra = rand() % n;
             int rb = rand() % n;
-            while (ra == rb) ra = rand() % n; 
+            while (ra == rb) ra = rand() % n;
             stest << ra << " " << rb << " " << i%4+1 << endl;
         }
 
@@ -295,10 +295,6 @@ int main(int argc, char *argv[]) {
     // Faster cin and cout
     ios_base::sync_with_stdio(0);cin.tie(0);
 
-    if (argc > 1 && !strcmp(argv[1], "-ut")) {
-        LocalUnittest lut;
-        return lut.run();
-    }
     cout << (new Roads)->calculate() << endl;
     return 0;
 }

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 560C_hexagon.py - Codeforces.com/problemset/problem/560/C Hexagon program by Sergey 2015
 
 # Standard modules

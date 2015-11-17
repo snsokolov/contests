@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 580C_park.py - Codeforces.com/problemset/problem/580/C by Sergey 2015
 
 import unittest

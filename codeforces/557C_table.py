@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 557C_table.py - Codeforces.com/problemset/problem/557/C Table quiz by Sergey 2015
 
 # Standard modules
@@ -36,11 +36,10 @@ class Table:
             self.legs.append(n[0])
             self.energy.append(n[1])
 
-        # Prepare accumulator variables
-
     def get_new_layer_info(self, legs, energy):
 
         ll = len(legs)
+        prev = -1
         for (i, l) in enumerate(legs):
 
             self.ilen = l

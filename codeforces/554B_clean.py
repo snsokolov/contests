@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 554B_clean.py - Codeforces.com/problemset/problem/554/B Clean quiz by Sergey 2015
 
 # Standard modules

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 579D_or.py - Codeforces.com/problemset/problem/579/D by Sergey 2015
 
 import unittest

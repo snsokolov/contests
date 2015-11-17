@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 560A_currency.py - Codeforces.com/problemset/problem/560/A Currency program by Sergey 2015
 
 # Standard modules

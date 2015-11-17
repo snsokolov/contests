@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 569B_inv.py - Codeforces.com/problemset/problem/569/B Inv program by Sergey 2015
 
 import unittest

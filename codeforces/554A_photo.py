@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 554A_photo.py - Codeforces.com/problemset/problem/554/A Photo quiz by Sergey 2015
 
 # Standard modules

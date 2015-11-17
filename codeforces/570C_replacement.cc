@@ -31,14 +31,14 @@ class Unittest { public:
     virtual single_test() {}
     virtual test_list() { single_test(); }
     double dclock() { return double(clock()) / CLOCKS_PER_SEC; }
-    status() {
+    int status() {
         cout << endl; if (fails) cout << serr.str();
         cout << "--------------------------------------------------" << endl;
         cout << "Ran " << checks << " checks in " << dclock() << "s" << endl << endl;
         if (fails) cout << "FAILED (failures=" << fails << ")"; else cout << "OK" << endl;
         return fails > 0;
     }
-    run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
+    int run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
 };
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -99,7 +99,7 @@ class Replacement { public:
         int end = it->first + it->second - 1;
         if (a > end) return;
         if (a == end){
-            if (it->second == 1) dots.erase(a); 
+            if (it->second == 1) dots.erase(a);
             else { it->second--; f--; }
             return;
         }
@@ -114,9 +114,9 @@ class Replacement { public:
         if (it != dots.end()) {
             if (a == it->first-1) {
                 bool merged = false;
-                if (it != dots.begin()){ 
-                    previt--; 
-                    merged = (a == previt->first + previt->second); 
+                if (it != dots.begin()){
+                    previt--;
+                    merged = (a == previt->first + previt->second);
                 }
                 if(merged) {
                     previt->second += it->second + 1;
@@ -261,10 +261,6 @@ int main(int argc, char *argv[]) {
     // Faster cin and cout
     ios_base::sync_with_stdio(0);cin.tie(0);
 
-    if (argc > 1 && !strcmp(argv[1], "-ut")) {
-        LocalUnittest lut;
-        return lut.run();
-    }
     cout << (new Replacement)->calculate() << endl;
     return 0;
 }

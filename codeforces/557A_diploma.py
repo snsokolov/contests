@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 557A_diploma.py - Codeforces.com/problemset/problem/557/A Diploma quiz by Sergey 2015
 
 # Standard modules

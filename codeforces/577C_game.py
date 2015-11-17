@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 577C_game.py - Codeforces.com/problemset/problem/577/C by Sergey 2015
 
 import unittest

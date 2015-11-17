@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 567A_mail.py - Codeforces.com/problemset/problem/567/A Mail program by Sergey 2015
 
 import unittest

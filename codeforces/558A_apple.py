@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 558A_apple.py - Codeforces.com/problemset/problem/558/A Apple quiz by Sergey 2015
 
 # Standard modules

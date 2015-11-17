@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 577B_modulo.py - Codeforces.com/problemset/problem/577/B by Sergey 2015
 
 import unittest

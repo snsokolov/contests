@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # scales.py - Codeforces.com/problemset/problem/552/C quiz by Sergey 2015
 
 # Standard modules

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 556B_fake.py - Codeforces.com/problemset/problem/556/B Fake quiz by Sergey 2015
 
 # Standard modules

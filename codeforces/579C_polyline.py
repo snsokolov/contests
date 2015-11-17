@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 579C_polyline.py - Codeforces.com/problemset/problem/579/C by Sergey 2015
 
 import unittest

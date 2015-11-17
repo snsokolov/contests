@@ -31,14 +31,14 @@ class Unittest { public:
     virtual single_test() {}
     virtual test_list() { single_test(); }
     double dclock() { return double(clock()) / CLOCKS_PER_SEC; }
-    status() {
+    int status() {
         cout << endl; if (fails) cout << serr.str();
         cout << "--------------------------------------------------" << endl;
         cout << "Ran " << checks << " checks in " << dclock() << "s" << endl << endl;
         if (fails) cout << "FAILED (failures=" << fails << ")"; else cout << "OK" << endl;
         return fails > 0;
     }
-    run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
+    int run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
 };
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -148,10 +148,6 @@ int main(int argc, char *argv[]) {
     // Faster cin and cout
     ios_base::sync_with_stdio(0);cin.tie(0);
 
-    if (argc > 1 && !strcmp(argv[1], "-ut")) {
-        LocalUnittest lut;
-        return lut.run();
-    }
     cout << (new Music)->calculate() << endl;
     return 0;
 }

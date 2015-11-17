@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 554C_colored.py - Codeforces.com/problemset/problem/554/C Colored quiz by Sergey 2015
 
 # Standard modules

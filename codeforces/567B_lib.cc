@@ -15,23 +15,23 @@ class Unittest { public:
     typedef const string& cs;
     int checks, fails; ostringstream serr; istringstream *in;
     Unittest() { checks = fails = 0;}
-    run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
-    virtual test_list() { single_test(); }
-    virtual single_test() {}
-    test_cin(cs s){ in = new istringstream(s); cin.rdbuf(in->rdbuf()); }
-    template <typename T> check(T a, T b, cs stra, cs strb, cs file, int line, cs func) {
-        checks++; if (a == b) { cout << "."; return 0; } 
+    int run() { streambuf* ocin = cin.rdbuf(); test_list(); cin.rdbuf(ocin); return status(); }
+    virtual void test_list() { single_test(); }
+    virtual void single_test() {}
+    void test_cin(cs s){ in = new istringstream(s); cin.rdbuf(in->rdbuf()); }
+    template <typename T> int check(T a, T b, cs stra, cs strb, cs file, int line, cs func) {
+        checks++; if (a == b) { cout << "."; return 0; }
         fails++; cout << "F"; hdr(stra, strb, file, line, func);
         serr << "  Error: \"" << a << "\" ! = \"" << b << "\"" << endl << endl;
     }
-    hdr(cs stra, cs strb, cs file, int line, cs func) {
+    void hdr(cs stra, cs strb, cs file, int line, cs func) {
         serr << "==================================================" << endl;
         serr << "FAIL: " << func << endl;
         serr << "--------------------------------------------------" << endl;
         serr << "File \"" << file << "\", line " << line << " in " << func << endl;
         serr << "  Checking " << stra << " == " << strb << endl;
     }
-    status() {
+    int status() {
         cout << endl; if (fails) cout << serr.str();
         cout << "--------------------------------------------------" << endl;
         cout << "Ran " << checks << " checks in " << dclock() << "s" << endl << endl;
@@ -107,7 +107,7 @@ class LocalUnittest: public Unittest {
 
     Lib* d;
 
-    single_test() {
+    void single_test() {
 
         // Constructor test
         string test = "6\n+ 12001\n- 12001\n- 1\n- 1200\n+ 1\n+ 7";
@@ -138,11 +138,11 @@ class LocalUnittest: public Unittest {
         // time_limit_test(10000);
     }
 
-    time_limit_test(int nmax){
+    void time_limit_test(int nmax){
 
         int smax = nmax;
         ostringstream stest;
-        
+
         // Random inputs
         stest << nmax << " " << smax << endl;
         for(int i = 0; i < nmax; i++) stest << i << " " << i+1 << endl;

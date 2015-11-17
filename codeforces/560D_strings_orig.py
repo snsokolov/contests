@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 560D_strings.py - Codeforces.com/problemset/problem/560/D Strings program by Sergey 2015
 
 # Standard modules

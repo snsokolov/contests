@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 577A_table.py - Codeforces.com/problemset/problem/577/A by Sergey 2015
 
 import unittest

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 556A_zeroes.py - Codeforces.com/problemset/problem/556/A Zeroes quiz by Sergey 2015
 
 # Standard modules

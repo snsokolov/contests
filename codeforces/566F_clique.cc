@@ -74,7 +74,7 @@ Clique* class_wrap_input(const string& test="") {
         cin.rdbuf(input.rdbuf());
     };
     Clique* d = new Clique();
-    if (test != "") cin.rdbuf(orig);    
+    if (test != "") cin.rdbuf(orig);
     return d;
 }
 
@@ -104,7 +104,7 @@ class Unittest { public:
 
     Unittest() {
         test_cnt = fail_cnt = fail = 0;
-        status = "OK";
+        int status = "OK";
     }
 
     // Override this function in derived class
@@ -115,7 +115,7 @@ class Unittest { public:
 
     test_basic() { CHECKT("Base class basic test" == ""); }
 
-    run() {
+    int run() {
         test_list();
         double elp_secs = double(clock()) / CLOCKS_PER_SEC;
         cout << endl;
@@ -227,7 +227,7 @@ class LocalUnittest: public Unittest {
         int imax = 9900;
         string test;
         ostringstream o_test;
-        
+
         o_test << imax << endl;
         for(int i = 0; i < imax; i++) o_test << i+2 << " ";
         test = o_test.str();
@@ -254,10 +254,6 @@ int main(int argc, char *argv[]) {
     // Faster cin and cout
     ios_base::sync_with_stdio(0);cin.tie(0);
 
-    if (argc > 1 && !strcmp(argv[1], "-ut")) {
-        LocalUnittest lut;
-        return lut.run();
-    }
     cout << calculate() << endl;
     return 0;
 }

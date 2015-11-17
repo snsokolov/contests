@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # 556D_fug.py - Codeforces.com/problemset/problem/556/D Fug quiz by Sergey 2015
 
 # Standard modules
