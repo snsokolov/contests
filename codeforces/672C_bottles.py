@@ -3,7 +3,6 @@
 
 import unittest
 import sys
-import math
 
 ###############################################################################
 # Bottles Class (Main Program)
@@ -44,54 +43,32 @@ class Bottles:
                 result = l[i]
         return (result, mini)
 
+    def hyp(self, a, b):
+        return (a*a + b*b)**0.5
+
     def calculate(self):
         """ Main calcualtion function of the class """
 
-        distt = []
-        dista = []
-        distb = []
-        for i in range(self.n):
-            distt.append(math.sqrt(
-                (self.numa[i] - self.tx)**2 + (self.numb[i] - self.ty)**2))
-            dista.append(math.sqrt(
-                (self.numa[i] - self.ax)**2 + (self.numb[i] - self.ay)**2))
-            distb.append(math.sqrt(
-                (self.numa[i] - self.bx)**2 + (self.numb[i] - self.by)**2))
+        distt = [self.hyp(self.numa[i] - self.tx, self.numb[i] - self.ty)
+                 for i in range(self.n)]
+        dista = [self.hyp(self.numa[i] - self.ax, self.numb[i] - self.ay)
+                 for i in range(self.n)]
+        distb = [self.hyp(self.numa[i] - self.bx, self.numb[i] - self.by)
+                 for i in range(self.n)]
+        distamt = [dista[i] - distt[i] for i in range(self.n)]
+        distbmt = [distb[i] - distt[i] for i in range(self.n)]
 
-        result = sum(distt)*2
+        min1, min1i = self.minn(distamt)
+        min2, min2i = self.minn(distbmt, skipi=set([min1i]))
+        result1 = (sum(distt)*2 + min1 +
+                   (0 if min2 is None or min2 > 0 else min2))
 
-        distat = math.sqrt(
-            (self.tx - self.ax)**2 + (self.ty - self.ay)**2)
-        distbt = math.sqrt(
-            (self.tx - self.bx)**2 + (self.ty - self.by)**2)
+        min1, min1i = self.minn(distbmt)
+        min2, min2i = self.minn(distamt, skipi=set([min1i]))
+        result2 = (sum(distt)*2 + min1 +
+                   (0 if min2 is None or min2 > 0 else min2))
 
-        # Find first min
-        mina, minai = self.minn(dista)
-        minb, minbi = self.minn(distb)
-
-        firstminisa = 1 if mina < minb else 0
-        firstmin = mina if mina < minb else minb
-        firstmini = minai if mina < minb else minbi
-
-        result = result - distt[firstmini] + firstmin
-
-        # Find the second min
-        if firstminisa:
-            ddd = []
-            for i in range(self.n):
-                ddd.append(distb[i] - distt[i])
-            minb, minbi = self.minn(ddd, skipi=set([firstmini]))
-            if minb < 0:
-                result = result - distt[minbi] + distb[minbi]
-        else:
-            ddd = []
-            for i in range(self.n):
-                ddd.append(dista[i] - distt[i])
-            mina, minai = self.minn(ddd, skipi=set([firstmini]))
-            if mina < 0:
-                result = result - distt[minai] + dista[minai]
-
-        return str(result)
+        return str(min(result1, result2))
 
 ###############################################################################
 # Unit Tests
@@ -111,18 +88,14 @@ class unitTests(unittest.TestCase):
         self.assertEqual(d.numb, [1, 1, 3])
 
         # Sample test
-        self.assertEqual(Bottles(test).calculate(), "11.084259940083")
+        self.assertEqual(Bottles(test).calculate(), "11.084259940083063")
 
         # Sample test
         test = "5 0 4 2 2 0\n5\n5 2\n3 0\n5 5\n3 5\n3 3"
-        # self.assertEqual(Bottles(test).calculate(), "33.121375178000")
-
-        # Sample test
-        test = ""
-        # self.assertEqual(Bottles(test).calculate(), "0")
+        self.assertEqual(Bottles(test).calculate(), "33.121375178")
 
         # My tests
-        test = ""
+        test = "0 0 1 1 2 2\n1\n1 3\n"
         # self.assertEqual(Bottles(test).calculate(), "0")
 
         # Time limit test
